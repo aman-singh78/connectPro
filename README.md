@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Connect Pro - Frontend Only
 
-## Getting Started
+A simplified Next.js frontend application with role-based access control demo.
 
-First, run the development server:
+## 🚀 Quick Start
 
 ```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔐 Demo Login Credentials
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Email | Password | Role | Access |
+|-------|----------|------|---------|
+| admin@example.com | password123 | ADMIN | Full access + Admin panel |
+| manager@example.com | password123 | MANAGER | Team management + Analytics |
+| user@example.com | password123 | USER | Basic dashboard access |
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                    # Next.js pages
+│   ├── dashboard/         # Protected dashboard
+│   ├── login/             # Login page
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Landing page
+├── components/            # React components
+│   ├── ui/               # Base UI components
+│   └── layout/           # Layout components
+└── context/              # React context
+    └── AuthContext.tsx   # Authentication state
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ✨ Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ✅ Role-based navigation (Admin/Manager/User)
+- ✅ Mock authentication with demo users
+- ✅ Responsive dashboard layout
+- ✅ Protected routes
+- ✅ Modern UI with Tailwind CSS
+- ✅ TypeScript support
+- ✅ Clean RAFCE component structure
 
-## Deploy on Vercel
+## 🎨 UI Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Built with:
+- **Tailwind CSS** for styling
+- **shadcn/ui** for base components
+- **Lucide React** for icons
+- **Next.js 15** with App Router
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📱 Pages
+
+1. **Landing Page** (`/`) - Welcome page with login button
+2. **Login Page** (`/login`) - Authentication form
+3. **Dashboard** (`/dashboard`) - Main dashboard with stats
+4. **Protected Routes** - Role-based access control
+
+## 🛠️ Development Notes
+
+- All components use React Arrow Function Component Export (RAFCE)
+- Frontend-only with mock authentication
+- No backend dependencies
+- Ready for team collaboration
+- Easy to extend with real API integration
+
+## 🔄 Next Steps
+
+To add backend functionality:
+1. Set up API routes in `src/app/api/`
+2. Replace mock authentication with real JWT tokens
+3. Add database integration
+4. Implement user registration
+5. Add real team management features
+
+## 📋 Available Scripts
+
+```bash
+npm run dev      # Start development server
+npm run build    # Build for production
+npm run start    # Start production server
+npm run lint     # Run ESLint
+```
+
+## 🌟 Demo Features
+
+- **Role-based UI** - Different users see different navigation options
+- **Mock Data** - Realistic demo data for development
+- **Responsive Design** - Works on desktop and mobile
+- **Loading States** - Proper loading indicators
+- **Error Handling** - User-friendly error messages
